@@ -54,23 +54,23 @@ void layout()
   
   //Line under the title
   fill(#00004a);
-  rect(x + 500, y - 80, tabWidth + 230 , tabHeight - 50);
+  rect(x + 400, y - 80, tabWidth + 230 , tabHeight - 50);
   stroke(0);
 
   //Local time
   fill(b-20);
-  rect(x + 330 , y - 35, tabWidth + 100 , tabHeight + 20);
+  rect(x + 280 , y - 35, tabWidth + 100 , tabHeight + 20);
   //fill(b);
   //rect(x + 280, y - 100, tabWidth, boxHeight - 50);
   
   
   //Date
   fill(b-20);
-  rect(x + 700 , y - 35, tabWidth + 200 , tabHeight + 20);
+  rect(x + 650 , y - 35, tabWidth + 200 , tabHeight + 20);
   
   //Operator
   fill(b-20);
-  rect(x + 365 , y + 40, tabWidth + 500 , tabHeight + 20);
+  rect(x + 315 , y + 40, tabWidth + 500 , tabHeight + 20);
   
   //CMD
   fill(b-20);
@@ -80,22 +80,22 @@ void layout()
   
   // BPM180
   fill(b-20);
-  rect(x + 290, y + 130 , tabWidth + 130, tabHeight);
+  rect(x + 260, y + 130 , tabWidth + 130, tabHeight);
   fill(b);
-  rect(x + 290, y + 170, tabWidth + 130, boxHeight + 370);
+  rect(x + 260, y + 170, tabWidth + 130, boxHeight + 370);
   
   // MPU6050
   fill(b-20);
-  rect(x + 670, y + 130 , tabWidth + 210, tabHeight);
+  rect(x + 630, y + 130 , tabWidth + 210, tabHeight);
   fill(b);
-  rect(x + 670, y + 170, tabWidth + 210, boxHeight + 370);
+  rect(x + 630, y + 170, tabWidth + 210, boxHeight + 370);
 
 
   // RawData
   fill(b-20);
-  rect(x + 1130, y + 130 , tabWidth + 40 , tabHeight);
+  rect(x + 1080, y + 130 , tabWidth + 40 , tabHeight);
   fill(b);
-  rect(x + 1130, y + 170, tabWidth + 40, boxHeight + 370);
+  rect(x + 1080, y + 170, tabWidth + 40, boxHeight + 370);
 
 }
 
@@ -141,7 +141,7 @@ void guiInit()
   cp5.addTextlabel("Strike")
     .setBroadcast(false)
     .setText("STRIKE: Small Solid Rocket")
-    .setPosition(x + 500, y - 120)
+    .setPosition(x + 400, y - 120)
     .setFont(fonttitle)
     .setBroadcast(true);
     
@@ -151,14 +151,14 @@ void guiInit()
  cp5.addTextlabel("LocalTime")
     .setBroadcast(false)
     .setText("Time:")
-    .setPosition(x + 420 , y - 20)
+    .setPosition(x + 320 , y - 20)
     .setFont(fontlocaltime)
     .setBroadcast(true);
 
  currentTime = cp5.addTextlabel("currentTime")
     .setBroadcast(false)
     .setText("00:00:00")
-    .setPosition(x + 500 , y - 20)
+    .setPosition(x + 400 , y - 20)
     .setFont(fontlocaltime)
     .setBroadcast(true);
   
@@ -166,14 +166,14 @@ void guiInit()
  cp5.addTextlabel("Date")
     .setBroadcast(false)
     .setText("Date:")
-    .setPosition(x + 800 , y - 20)
+    .setPosition(x + 700 , y - 20)
     .setFont(fontlocaltime)
     .setBroadcast(true);
 
  currentDate = cp5.addTextlabel("currentDate")
     .setBroadcast(false)
     .setText("01/01/2021")
-    .setPosition(x + 900 , y - 20)
+    .setPosition(x + 800 , y - 20)
     .setFont(fontlocaltime)
     .setBroadcast(true);
     
@@ -182,7 +182,7 @@ void guiInit()
  cp5.addTextlabel("Operator Label")
     .setBroadcast(false)
     .setText("Operation:")
-    .setPosition(x + 380 , y + 55)
+    .setPosition(x + 350 , y + 55)
     .setFont(fontlocaltime)
     .setBroadcast(true);
     
@@ -190,7 +190,7 @@ void guiInit()
   cp5.addTextlabel("CMD Label")
     .setBroadcast(false)
     .setText("CMD")
-    .setPosition(x + 100, y + 140)
+    .setPosition(x + 80, y + 140)
     .setFont(fontBMP)
     .setBroadcast(true);
     
@@ -199,7 +199,7 @@ void guiInit()
   cp5.addTextlabel("BMP180 Label")
     .setBroadcast(false)
     .setText("BMP180")
-    .setPosition(x + 440, y + 140)
+    .setPosition(x + 410, y + 140)
     .setFont(fontBMP)
     .setBroadcast(true);
 
@@ -208,7 +208,7 @@ void guiInit()
   cp5.addTextlabel("MPU6050 Label")
     .setBroadcast(false)
     .setText("MPU6050")
-    .setPosition(x + 850, y + 140)
+    .setPosition(x + 810, y + 140)
     .setFont(fontMPU)
     .setBroadcast(true);
     
@@ -216,7 +216,7 @@ void guiInit()
   cp5.addTextlabel("RawData Label")
     .setBroadcast(false)
     .setText("Raw Data")
-    .setPosition(x + 1240, y + 140)
+    .setPosition(x + 1180, y + 140)
     .setFont(fontMPU)
     .setBroadcast(true);
     
@@ -227,7 +227,7 @@ myKnobB = cp5.addKnob("Power")
                .setRange(0,5)
                .setValue(2.5)
                .setFont(fontMPU)
-               .setPosition(x + 1210, y - 120)
+               .setPosition(x + 1130, y - 120)
                .setRadius(100)
                .setNumberOfTickMarks(2)
                .setTickMarkLength(2)
@@ -245,8 +245,8 @@ myKnobB = cp5.addKnob("Power")
  
 //Pressure Graph 
 PressureChart = cp5.addChart("Pressure Value")
-    .setPosition(x + 300, y + 200)
-    .setSize(tabWidth + 110 , boxHeight + 80)
+    .setPosition(x + 280, y + 200)
+    .setSize(tabWidth + 80 , boxHeight + 50)
     .setRange(0, 1023)
     .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
     .setStrokeWeight(1.5)
@@ -258,8 +258,8 @@ PressureChart.getColor().setBackground(#00004a);
   
 //Alttitude Graph
 AlttiChart = cp5.addChart("Alttitude Value")
-    .setPosition(x + 300, y + 420)
-    .setSize(tabWidth + 110 , boxHeight + 80)
+    .setPosition(x + 280, y + 390)
+    .setSize(tabWidth + 80 , boxHeight + 50)
     .setRange(0, 1023)
     .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
     .setStrokeWeight(1.5)
@@ -271,8 +271,8 @@ AlttiChart.getColor().setBackground(#00004a);
   
 //Accelaremeter Graph
 acceChart = cp5.addChart("Accelerometer Value")
-    .setPosition(x + 680, y + 200)
-    .setSize(tabWidth + 190 , boxHeight + 20)
+    .setPosition(x + 650, y + 200)
+    .setSize(tabWidth + 160 , boxHeight)
     .setRange(0, 100)
     .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
     .setStrokeWeight(1.5)
@@ -285,8 +285,8 @@ acceChart.getColor().setBackground(#00004a);
   
 //Gyrometer Graph
 gyroChart = cp5.addChart("Gyroscope Value")
-    .setPosition(x + 680, y + 345)
-    .setSize(tabWidth + 190 , boxHeight + 20)
+    .setPosition(x + 650, y + 325)
+    .setSize(tabWidth + 160 , boxHeight)
     .setRange(0, 100)
     .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
     .setStrokeWeight(1.5)
@@ -299,8 +299,8 @@ gyroChart.getColor().setBackground(#00004a);
 
 //Angular Graph
 anguChart = cp5.addChart("Angular Value")
-    .setPosition(x + 680, y + 490)
-    .setSize(tabWidth + 190 , boxHeight + 20)
+    .setPosition(x + 650, y + 450)
+    .setSize(tabWidth + 160 , boxHeight)
     .setRange(0, 100)
     .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
     .setStrokeWeight(1.5)
@@ -319,14 +319,14 @@ anguChart.getColor().setBackground(#00004a);
 cp5.addTextlabel("Pressure")
     .setBroadcast(false)
     .setText("Pressure :                               ")
-    .setPosition(x + 1160, y + 200)
+    .setPosition(x + 1100, y + 200)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   pressureText = cp5.addTextlabel("PressureData")
     .setBroadcast(false)
     .setText("0 Pascal")
-    .setPosition(x + 1300, y + 200)
+    .setPosition(x + 1240, y + 200)
     .setFont(fontnormal)
     .setBroadcast(true);
     
@@ -335,14 +335,14 @@ cp5.addTextlabel("Pressure")
 cp5.addTextlabel("Alttitude")
     .setBroadcast(false)
     .setText("Alttitude :                               ")
-    .setPosition(x + 1160, y + 240)
+    .setPosition(x + 1100, y + 240)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   alttitudeText = cp5.addTextlabel("AlttitudeData")
     .setBroadcast(false)
     .setText("0 H")
-    .setPosition(x + 1300, y + 240)
+    .setPosition(x + 1240, y + 240)
     .setFont(fontnormal)
     .setBroadcast(true);
     
@@ -351,14 +351,14 @@ cp5.addTextlabel("Alttitude")
 cp5.addTextlabel("Accelerometer")
     .setBroadcast(false)
     .setText("Accelerometer :                               ")
-    .setPosition(x + 1160, y + 280)
+    .setPosition(x + 1100, y + 280)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   acceXText = cp5.addTextlabel("AccelerometerData")
     .setBroadcast(false)
     .setText("0x, 0y, 0z")
-    .setPosition(x + 1300, y + 280)
+    .setPosition(x + 1240, y + 280)
     .setFont(fontnormal)
     .setBroadcast(true);
 
@@ -366,14 +366,14 @@ cp5.addTextlabel("Accelerometer")
 cp5.addTextlabel("Gyroscope")
     .setBroadcast(false)
     .setText("Gyroscope :                               ")
-    .setPosition(x + 1160, y + 320)
+    .setPosition(x + 1100, y + 320)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   gyroText = cp5.addTextlabel("GyroscopeData")
     .setBroadcast(false)
     .setText("0x, 0y, 0z")
-    .setPosition(x + 1300, y + 320)
+    .setPosition(x + 1240, y + 320)
     .setFont(fontnormal)
     .setBroadcast(true);
     
@@ -382,14 +382,14 @@ cp5.addTextlabel("Gyroscope")
 cp5.addTextlabel("Angular")
     .setBroadcast(false)
     .setText("Angular :                               ")
-    .setPosition(x + 1160, y + 360)
+    .setPosition(x + 1100, y + 360)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   anguText = cp5.addTextlabel("AngularData")
     .setBroadcast(false)
     .setText("0x, 0y, 0z")
-    .setPosition(x + 1300, y + 360)
+    .setPosition(x + 1240, y + 360)
     .setFont(fontnormal)
     .setBroadcast(true);
 
@@ -398,14 +398,14 @@ cp5.addTextlabel("Angular")
 cp5.addTextlabel("Temperature")
     .setBroadcast(false)
     .setText("Temperature :                               ")
-    .setPosition(x + 1160, y + 400)
+    .setPosition(x + 1100, y + 400)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   temperatureText = cp5.addTextlabel("TemperatureData")
     .setBroadcast(false)
     .setText("celcius")
-    .setPosition(x + 1300, y + 400)
+    .setPosition(x + 1240, y + 400)
     .setFont(fontnormal)
     .setBroadcast(true);
     
@@ -413,14 +413,14 @@ cp5.addTextlabel("Temperature")
 cp5.addTextlabel("Longitude")
     .setBroadcast(false)
     .setText("Longitude : ")
-    .setPosition(x + 1160, y + 440)
+    .setPosition(x + 1100, y + 440)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   longitudeText = cp5.addTextlabel("LongitudeData")
     .setBroadcast(false)
     .setText("")
-    .setPosition(x + 1300, y + 440)
+    .setPosition(x + 1240, y + 440)
     .setFont(fontnormal)
     .setBroadcast(true);
     
@@ -428,14 +428,14 @@ cp5.addTextlabel("Longitude")
 cp5.addTextlabel("Latitude")
     .setBroadcast(false)
     .setText("Latitude : ")
-    .setPosition(x + 1160, y + 480)
+    .setPosition(x + 1100, y + 480)
     .setFont(fontnormal)
     .setBroadcast(true);
 
   latitudeText = cp5.addTextlabel("LatitudeData")
     .setBroadcast(false)
     .setText("")
-    .setPosition(x + 1300, y + 480)
+    .setPosition(x + 1240, y + 480)
     .setFont(fontnormal)
     .setBroadcast(true);
  
@@ -466,15 +466,15 @@ cp5.addButton("tlm20")
     .setBroadcast(false)
     .setValue(0)
     .setPosition(x  , y + 320)
-    .setSize(130, 50)
+    .setSize(120, 40)
     .setFont(fontMPU)
     .setBroadcast(true)
     ;
    cp5.addButton("BMPOff")
     .setBroadcast(false)
     .setValue(0)
-    .setPosition(x + 140, y + 320)
-    .setSize(130, 50)
+    .setPosition(x + 130, y + 320)
+    .setSize(120, 40)
     .setFont(fontMPU)
     .setBroadcast(true)
     ;
@@ -483,16 +483,16 @@ cp5.addButton("tlm20")
   cp5.addButton("MPUOn")
     .setBroadcast(false)
     .setValue(0)
-    .setPosition(x , y + 240)
-    .setSize(130, 50)
+    .setPosition(x , y + 260)
+    .setSize(120, 40)
     .setFont(fontMPU)
     .setBroadcast(true)
     ;
    cp5.addButton("MPUOff")
     .setBroadcast(false)
     .setValue(0)
-    .setPosition(x + 140, y + 240)
-    .setSize(130, 50)
+    .setPosition(x + 130, y + 260)
+    .setSize(120, 40)
     .setFont(fontMPU)
     .setBroadcast(true)
     ;
